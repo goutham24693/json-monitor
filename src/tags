@@ -1,0 +1,71 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+CC	Makefile	/^CC = gcc$/;"	m
+CFLAGS	Makefile	/^CFLAGS = -g -Wall -pthread$/;"	m
+COMPLETE	global.h	/^	COMPLETE$/;"	e	enum:_Event_
+COMPLETE_EVENT_STR	event_data.c	/^#define COMPLETE_EVENT_STR /;"	d	file:
+EDmutex	event_data.c	/^static pthread_mutex_t EDmutex;			\/\/ lock to operate on gEventData$/;"	v	file:
+EVENT_PATTERN	utils.h	/^#define EVENT_PATTERN /;"	d
+Event	global.h	/^}Event;$/;"	t	typeref:enum:_Event_
+EventData	global.h	/^typedef struct EventData {$/;"	s
+EventData	global.h	/^} EventData;$/;"	t	typeref:struct:EventData
+FAILURE	global.h	/^#define FAILURE /;"	d
+HANDLER_DONE_STATE	handler.h	/^	HANDLER_DONE_STATE,$/;"	e	enum:_States_
+HANDLER_IDLE_STATE	handler.h	/^	HANDLER_IDLE_STATE,$/;"	e	enum:_States_
+HANDLER_INVALID_STATE	handler.h	/^	HANDLER_INVALID_STATE$/;"	e	enum:_States_
+HANDLER_IN_PROGRESS_STATE	handler.h	/^	HANDLER_IN_PROGRESS_STATE,$/;"	e	enum:_States_
+HANDLER_WAIT_STATE	handler.h	/^	HANDLER_WAIT_STATE,$/;"	e	enum:_States_
+HEADERS	Makefile	/^HEADERS = $(wildcard *.h)$/;"	m
+LIBS	Makefile	/^LIBS =$/;"	m
+OBJECTS	Makefile	/^OBJECTS = $(patsubst %.c, %.o, $(wildcard *.c))$/;"	m
+PROGRAM_NAME	global.h	/^#define PROGRAM_NAME /;"	d
+READY_EVENT_STR	event_data.c	/^#define READY_EVENT_STR /;"	d	file:
+READY_TO_WAIT	global.h	/^	READY_TO_WAIT,$/;"	e	enum:_Event_
+STARTING	global.h	/^	STARTING,$/;"	e	enum:_Event_
+STARTING_EVENT_STR	event_data.c	/^#define STARTING_EVENT_STR /;"	d	file:
+SUCCESS	global.h	/^#define SUCCESS /;"	d
+SmData	handler.h	/^}SmData;$/;"	t	typeref:struct:_sm_data_
+State	handler.h	/^} State;$/;"	t	typeref:enum:_States_
+TARGET	Makefile	/^TARGET = run.exe$/;"	m
+VALUE_PATTERN	utils.h	/^#define VALUE_PATTERN /;"	d
+_Event_	global.h	/^typedef enum _Event_ {$/;"	g
+_GLOBAL_H_	global.h	/^#define _GLOBAL_H_$/;"	d
+_States_	handler.h	/^typedef enum _States_ {$/;"	g
+_sm_data_	handler.h	/^typedef struct _sm_data_ {$/;"	s
+data	global.h	/^	char data[128];$/;"	m	struct:EventData
+data	handler.h	/^	char data[128];$/;"	m	struct:_sm_data_
+event	global.h	/^	Event event;$/;"	m	struct:EventData
+event	handler.h	/^	Event event;$/;"	m	struct:_sm_data_
+fetch_sm_data	main.c	/^int fetch_sm_data (SmData * psm_data)$/;"	f
+gEventData	event_data.c	/^static EventData gEventData;			\/\/ Event and value saved here	$/;"	v	file:
+get_event	event_data.c	/^Event get_event ()$/;"	f
+get_event_str_from_file	utils.c	/^int get_event_str_from_file(char * file, char * out, ssize_t l)$/;"	f
+get_pattern	utils.c	/^static int get_pattern(char * file, char * out, ssize_t l, char * pattern)$/;"	f	file:
+get_value_str	event_data.c	/^int get_value_str (char * out, ssize_t l)$/;"	f
+get_value_str_from_file	utils.c	/^int get_value_str_from_file(char * file, char * out, ssize_t l)$/;"	f
+handler_exit	event_data.c	/^int handler_exit()$/;"	f
+handler_init	event_data.c	/^int handler_init(char * path)$/;"	f
+is_monitor_ready	monitor.c	/^static bool is_monitor_ready;$/;"	v	file:
+main	main.c	/^int main(int argc, char * argv[])$/;"	f
+monitor_signal_ready	event_data.c	/^void monitor_signal_ready()$/;"	f
+monitor_thread	monitor.c	/^void * monitor_thread (void * arg)$/;"	f
+monitor_thread_id	event_data.c	/^static pthread_t monitor_thread_id;		\/\/ monitor thread id$/;"	v	file:
+print_help	main.c	/^static void print_help()$/;"	f	file:
+ready_condition	event_data.c	/^static pthread_cond_t ready_condition;	\/\/ conditional variable for thread sync$/;"	v	file:
+set_event_value	event_data.c	/^int set_event_value (char * event, char * value)$/;"	f
+sm_running	handler.h	/^	bool sm_running;$/;"	m	struct:_sm_data_
+start_handler_state_machine	main.c	/^static int start_handler_state_machine()$/;"	f	file:
+state_done	main.c	/^static State state_done(SmData * psm_data)$/;"	f	file:
+state_idle	main.c	/^static State state_idle (SmData * psm_data)$/;"	f	file:
+state_in_progress	main.c	/^static State state_in_progress(SmData * psm_data)$/;"	f	file:
+state_wait	main.c	/^static State state_wait(SmData * psm_data)$/;"	f	file:
+transition_complete	main.c	/^static State transition_complete (SmData * psm_data)$/;"	f	file:
+transition_init	main.c	/^static State transition_init (SmData * psm_data)$/;"	f	file:
+transition_start	main.c	/^static State transition_start (SmData * psm_data)$/;"	f	file:
+transition_waiting	main.c	/^static State transition_waiting (SmData * psm_data)$/;"	f	file:
+update_event_data	monitor.c	/^static void update_event_data (char * file)$/;"	f	file:
+wait_for_monitor_ready	event_data.c	/^void wait_for_monitor_ready()$/;"	f
